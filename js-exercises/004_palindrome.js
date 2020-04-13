@@ -2,7 +2,7 @@ const readline = require("readline-sync");
 
 let str = readline.question("enter a string :");
 
-function checkPalindrome(val) {
+const checkPalindrome = val => {
   let rev = "";
   for (i = val.length - 1; i >= 0; i--) {
     rev = rev + val[i];
@@ -12,6 +12,6 @@ function checkPalindrome(val) {
     return "this is a palindrome";
   }
   return "this is not a palindrome";
-}
+};
 
 console.log(checkPalindrome(str));
