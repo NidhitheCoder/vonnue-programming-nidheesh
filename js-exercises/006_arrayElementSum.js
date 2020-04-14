@@ -1,7 +1,7 @@
 const readline = require("readline-sync");
 
 let sum = 0;
-const ElementSum = str => {
+const elementSum = str => {
   str.split(",").map(el => {
     sum = sum + parseInt(el);
   });
@@ -9,4 +9,4 @@ const ElementSum = str => {
 };
 
 let str = readline.question("Enter array decimal elements separated by comma:");
-ElementSum(str);
+elementSum(str);
