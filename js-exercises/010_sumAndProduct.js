@@ -5,7 +5,7 @@ let option = readline.question("Enter sum for sum,product for product :");
 
 const findSum = num => {
   let sum = 0;
-  for (i = 1; i <= num; i++) {
+  for (let i = 1; i <= num; i++) {
     sum += i;
   }
   return sum;
@@ -13,7 +13,7 @@ const findSum = num => {
 
 const findProduct = num => {
   product = 1;
-  for (i = 1; i <= num; i++) {
+  for (let i = 1; i <= num; i++) {
     product *= i;
   }
   return product;
