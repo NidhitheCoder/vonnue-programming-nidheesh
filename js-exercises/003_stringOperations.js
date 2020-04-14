@@ -12,7 +12,7 @@ const reverseStr = str => {
 const mixLetters = (str1, str2) => {
   let len = str1.length > str2.length ? str1.length : str2.length;
   let combine = "";
-  for (i = 0; len > i; i++) {
+  for (let i = 0; len > i; i++) {
     if (str1[i] == undefined) {
       combine = combine + str2[i];
     } else if (str2[i] == undefined) {
