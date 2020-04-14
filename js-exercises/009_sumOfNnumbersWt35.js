@@ -1,11 +1,13 @@
 const readline = require("readline-sync");
 
-let num = readline.question("Enter a number :");
+let number = readline.question("Enter a number :");
 sum = 0;
-
-for (i = 1; i <= num; i++) {
-  if (i % 3 == 0 || i % 5 == 0) {
-    sum += i;
+const sumWt3And5 = (num, sum) => {
+  for (let i = 1; i <= num; i++) {
+    if (i % 3 == 0 || i % 5 == 0) {
+      sum += i;
+    }
   }
-}
-console.log(sum);
+  return sum;
+};
+console.log(sumWt3And5(number, sum));
