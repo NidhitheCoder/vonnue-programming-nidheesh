@@ -1,20 +1,28 @@
 const readline = require("readline-sync");
 
-let num = readline.question("Enter a number :");
+let number = readline.question("Enter a number :");
 let option = readline.question("Enter sum for sum,product for product :");
 
-let sum = 0,
-  product = 1;
-if (option.toUpperCase() == "SUM") {
+const findSum = num => {
+  let sum = 0;
   for (i = 1; i <= num; i++) {
     sum += i;
   }
-  console.log(sum);
-} else if (option.toUpperCase() == "PRODUCT") {
+  return sum;
+};
+
+const findProduct = num => {
+  product = 1;
   for (i = 1; i <= num; i++) {
     product *= i;
   }
-  console.log(product);
+  return product;
+};
+
+if (option.toUpperCase() == "SUM") {
+  console.log(findSum(number));
+} else if (option.toUpperCase() == "PRODUCT") {
+  console.log(findProduct(number));
 } else {
   console.log(" wrong option");
 }
