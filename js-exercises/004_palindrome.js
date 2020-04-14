@@ -4,7 +4,7 @@ let str = readline.question("enter a string :");
 
 const checkPalindrome = val => {
   let rev = "";
-  for (i = val.length - 1; i >= 0; i--) {
+  for (let i = val.length - 1; i >= 0; i--) {
     rev = rev + val[i];
   }
 
