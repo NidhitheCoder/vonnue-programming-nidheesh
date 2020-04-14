@@ -9,8 +9,8 @@ const reverseStr = str => {
     .join("");
 };
 
-const MixLetters = (str1, str2) => {
-  const len = str1.length > str2.length ? str1.length : str2.length;
+const mixLetters = (str1, str2) => {
+  let len = str1.length > str2.length ? str1.length : str2.length;
   let combine = "";
   for (i = 0; len > i; i++) {
     if (str1[i] == undefined) {
@@ -25,7 +25,7 @@ const MixLetters = (str1, str2) => {
 };
 
 const removeWhiteSpace = val => {
-  for (i = 0; val.length > i; i++) {
+  for (let i = 0; val.length > i; i++) {
     if (val[i] == " ") {
       val = val.replace(" ", "");
     }
@@ -43,6 +43,6 @@ console.log(
   "\nreverse concatenate : " +
     reverseStr(firstString).concat(reverseStr(secondString))
 );
-console.log("\nmixletters : " + MixLetters(firstString, secondString));
+console.log("\nmixletters : " + mixLetters(firstString, secondString));
 console.log("\nremove whitespaces 1st: " + removeWhiteSpace(firstString));
 console.log("\nremove whitespaces 2nd: " + removeWhiteSpace(secondString));
