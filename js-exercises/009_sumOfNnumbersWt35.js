@@ -1,8 +1,9 @@
 const readline = require("readline-sync");
 
 let number = readline.question("Enter a number :");
-sum = 0;
-const sumWt3And5 = (num, sum) => {
+
+const sumWt3And5 = num => {
+  let sum = 0;
   for (let i = 1; i <= num; i++) {
     if (i % 3 == 0 || i % 5 == 0) {
       sum += i;
@@ -10,4 +11,4 @@ const sumWt3And5 = (num, sum) => {
   }
   return sum;
 };
-console.log(sumWt3And5(number, sum));
+console.log(sumWt3And5(number));
