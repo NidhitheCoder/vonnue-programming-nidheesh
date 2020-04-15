@@ -5,7 +5,9 @@ const checkPrime = val => {
     return "it is not a prime number";
   }
   let flag = true;
-  for (let i = val - 1; i > 1; i--) {
+  let mid=Math.floor(val/2)+1;
+  for (let i =mid ; i > 1; i--) {
+
     if (val % i == 0) {
       flag = false;
     }
