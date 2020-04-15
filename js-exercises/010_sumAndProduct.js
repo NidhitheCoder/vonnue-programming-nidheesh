@@ -12,7 +12,7 @@ const findSum = num => {
 };
 
 const findProduct = num => {
-  product = 1;
+  let product = 1;
   for (let i = 1; i <= num; i++) {
     product *= i;
   }
