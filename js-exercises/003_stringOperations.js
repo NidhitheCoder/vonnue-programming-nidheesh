@@ -23,6 +23,14 @@ const mixLetters = (str1, str2) => {
   }
   return combine;
 };
+const splitIntoTwo = str => {
+  let len = str.length;
+  let mid = len / 2;
+  let half1, half2;
+  half1 = str.slice(0, mid);
+  half2 = str.slice(mid, len);
+  return half1 + "," + half2;
+};
 
 const removeWhiteSpace = val => {
   for (let i = 0; val.length > i; i++) {
@@ -44,5 +52,7 @@ console.log(
     reverseStr(firstString).concat(reverseStr(secondString))
 );
 console.log("\nmixletters : " + mixLetters(firstString, secondString));
+console.log("\n1st one :split into two : " + splitIntoTwo(firstString));
+console.log("\n2st one :split into two : " + splitIntoTwo(secondString));
 console.log("\nremove whitespaces 1st: " + removeWhiteSpace(firstString));
 console.log("\nremove whitespaces 2nd: " + removeWhiteSpace(secondString));
