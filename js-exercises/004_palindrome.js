@@ -8,7 +8,7 @@ const checkPalindrome = val => {
     rev = rev + val[i];
   }
 
-  if (val == rev) {
+  if (val === rev) {
     return "this is a palindrome";
   }
   return "this is not a palindrome";
