@@ -1,11 +1,12 @@
 const readline = require("readline-sync");
 
 let number = readline.question("Enter a number :");
-sum = 0;
-const findSum = (sum, num) => {
-  for (let i = 1; i <= num; i++) {""
+
+const findSum = num => {
+  let sum = 0;
+  for (let i = 1; i <= num; i++) {
     sum += i;
   }
   return sum;
 };
-console.log(findSum(sum, number));
+console.log(findSum(number));
