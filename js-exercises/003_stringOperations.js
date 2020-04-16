@@ -13,9 +13,9 @@ const mixLetters = (str1, str2) => {
   let len = str1.length > str2.length ? str1.length : str2.length;
   let combine = "";
   for (let i = 0; len > i; i++) {
-    if (str1[i] == undefined) {
+    if (str1[i] === undefined) {
       combine = combine + str2[i];
-    } else if (str2[i] == undefined) {
+    } else if (str2[i] === undefined) {
       combine = combine + str1[i];
     } else {
       combine = combine + str1[i] + str2[i];
@@ -23,6 +23,7 @@ const mixLetters = (str1, str2) => {
   }
   return combine;
 };
+
 const splitIntoTwo = str => {
   let len = str.length;
   let mid = len / 2;
@@ -42,15 +43,20 @@ const removeWhiteSpace = val => {
   return result;
 };
 
+
+const concatString=(str1,str2)=>{
+ return str1.concat(str2);
+}
+
 let firstString = readline.question("enter first string :");
 let secondString = readline.question("enter second string :");
 
-console.log("\nconcatenate : " + firstString.concat(secondString));
+console.log("\nconcatenate : "+ concatString(firstString,secondString));
 console.log("\nreverse first string: " + reverseStr(firstString));
 console.log("\nreverse second string : " + reverseStr(secondString));
 console.log(
   "\nreverse concatenate : " +
-    reverseStr(firstString).concat(reverseStr(secondString))
+  concatString( reverseStr(firstString),reverseStr(secondString))
 );
 console.log("\nmixletters : " + mixLetters(firstString, secondString));
 console.log("\n1st one :split into two : " + splitIntoTwo(firstString));
