@@ -2,16 +2,17 @@
 
 const readline = require("readline-sync");
 
-const reverseStr = str => {
+reverseStr = str => {
   return str
     .split("")
     .reverse()
     .join("");
 };
 
-const mixLetters = (str1, str2) => {
+mixLetters = (str1, str2) => {
   let len = str1.length > str2.length ? str1.length : str2.length;
   let combine = "";
+
   for (let i = 0; len > i; i++) {
     if (str1[i] === undefined) {
       combine = combine + str2[i];
@@ -21,10 +22,11 @@ const mixLetters = (str1, str2) => {
       combine = combine + str1[i] + str2[i];
     }
   }
+
   return combine;
 };
 
-const splitIntoTwo = str => {
+splitIntoTwo = str => {
   let len = str.length;
   let mid = len / 2;
   let half1, half2;
@@ -33,30 +35,31 @@ const splitIntoTwo = str => {
   return half1 + "," + half2;
 };
 
-const removeWhiteSpace = val => {
+removeWhiteSpace = val => {
   let result = "";
+
   for (let i = 0; val.length > i; i++) {
     if (val[i] !== " ") {
       result = result + val[i];
     }
   }
+
   return result;
 };
 
-
-const concatString=(str1,str2)=>{
- return str1.concat(str2);
-}
+concatString = (str1, str2) => {
+  return str1.concat(str2);
+};
 
 let firstString = readline.question("enter first string :");
 let secondString = readline.question("enter second string :");
 
-console.log("\nconcatenate : "+ concatString(firstString,secondString));
+console.log("\nconcatenate : " + concatString(firstString, secondString));
 console.log("\nreverse first string: " + reverseStr(firstString));
 console.log("\nreverse second string : " + reverseStr(secondString));
 console.log(
   "\nreverse concatenate : " +
-  concatString( reverseStr(firstString),reverseStr(secondString))
+    concatString(reverseStr(firstString), reverseStr(secondString))
 );
 console.log("\nmixletters : " + mixLetters(firstString, secondString));
 console.log("\n1st one :split into two : " + splitIntoTwo(firstString));
