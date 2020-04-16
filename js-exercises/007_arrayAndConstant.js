@@ -12,4 +12,5 @@ multiplyWtConstant = (arr, constant) => {
   });
   return result;
 };
+
 console.log(multiplyWtConstant(arr, constant));
