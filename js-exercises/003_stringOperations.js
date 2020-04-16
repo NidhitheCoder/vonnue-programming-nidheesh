@@ -33,12 +33,13 @@ const splitIntoTwo = str => {
 };
 
 const removeWhiteSpace = val => {
+  let result = "";
   for (let i = 0; val.length > i; i++) {
-    if (val[i] == " ") {
-      val = val.replace(" ", "");
+    if (val[i] !== " ") {
+      result = result + val[i];
     }
   }
-  return val;
+  return result;
 };
 
 let firstString = readline.question("enter first string :");
