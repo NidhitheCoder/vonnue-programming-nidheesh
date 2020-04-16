@@ -2,7 +2,8 @@ const readline = require("readline-sync");
 
 let num = readline.question("enter a positive number :");
 
-const checkPrimeNUmber = val => {
+ checkPrimeNUmber = val => {
+   
   if (val === 1) {
     return "it is not a prime number";
   }
