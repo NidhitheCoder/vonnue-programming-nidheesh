@@ -1,7 +1,8 @@
 const readline = require("readline-sync");
 
 let char = readline.question("enter a value :");
-const checkAlpha = letter => {
+
+checkAlpha = letter => {
   let exp = /^[A-Za-z]+$/;
   if (letter.match(exp)) {
     return "it is an alphabet";
@@ -9,4 +10,5 @@ const checkAlpha = letter => {
     return "not an alphabet";
   }
 };
+
 console.log(checkAlpha(char));
