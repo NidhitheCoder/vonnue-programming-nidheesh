@@ -1,24 +1,20 @@
-twentytimes = yr => {
-  let nextYear = yr;
-  let arr = [];
-  for (let j = 0; j < 20; j++) {
-    arr.push(nextYear);
-    nextYear = nextYear + 4;
-  }
-  return arr;
-};
+printLeapYears = year => {
+  let count = 1,
+    arrYears = [];
 
-printLeapYears = (year) => {
-  if (year % 4 === 0) {
-    return twentytimes(year);
-  } else {
-    for (let i = 1; i <= 3; i++) {
-      year = year + 1;
-      if (year % 4 === 0) {
-        return twentytimes(year);
-      }
+  while (count <= 20) {
+    if (year % 4 === 0) {
+      arrYears.push(year);
+      count += 1;
+      year+=4
     }
+    else{
+      year += 1;
+    }
+   
   }
+
+  return arrYears;
 };
 
 let year = new Date().getFullYear();
