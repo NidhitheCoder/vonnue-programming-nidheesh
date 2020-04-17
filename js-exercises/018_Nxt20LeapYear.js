@@ -8,7 +8,7 @@ twentytimes = yr => {
   return arr;
 };
 
-printLeapYears = () => {
+printLeapYears = (year) => {
   if (year % 4 === 0) {
     return twentytimes(year);
   } else {
