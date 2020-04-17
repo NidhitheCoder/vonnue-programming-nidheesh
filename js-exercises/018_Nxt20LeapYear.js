@@ -6,12 +6,10 @@ printLeapYears = year => {
     if (year % 4 === 0) {
       arrYears.push(year);
       count += 1;
-      year+=4
-    }
-    else{
+      year += 4;
+    } else {
       year += 1;
     }
-   
   }
 
   return arrYears;
