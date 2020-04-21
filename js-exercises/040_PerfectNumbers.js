@@ -11,7 +11,7 @@ checkPerfectNumber = number => {
       divSum += i;
     }
   }
-  
+
   if (number === divSum) {
     return "this is a perfect number";
   }
