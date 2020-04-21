@@ -5,7 +5,6 @@ let number2 = parseInt(readline.question("enter the second number : "));
 
 findFactors = num => {
   let arrFactors = [num];
-
   for (let i = Math.floor(num / 2); i > 0; i--) {
     if (num % i === 0) {
       arrFactors.push(i);
