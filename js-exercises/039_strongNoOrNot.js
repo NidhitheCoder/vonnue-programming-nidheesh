@@ -4,7 +4,7 @@ let num = parseInt(readline.question("enter a number :"));
 
 const findProduct = num => {
   let product = 1;
-  for (i = 1; i <= num; i++) {
+  for (let i = 1; i <= num; i++) {
     product *= i;
   }
   return product;
