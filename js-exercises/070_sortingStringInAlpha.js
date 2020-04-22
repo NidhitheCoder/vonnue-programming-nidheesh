@@ -1,4 +1,4 @@
-let stringValue = "Qwerty";
+let stringValue = "abcad";
 
 sortString = str => {
   let arr = str.split("");
@@ -11,7 +11,7 @@ sortString = str => {
         arr[i + 1] = arr[i];
         arr[i] = temp;
       }
-      
+
     }
   }
 
