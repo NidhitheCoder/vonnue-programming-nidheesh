@@ -10,7 +10,6 @@ findCube = num => {
 returnSum = val => {
   let num,
     sum = 0;
-
   while (val > 0) {
     num = val % 10;
     sum += findCube(num);
