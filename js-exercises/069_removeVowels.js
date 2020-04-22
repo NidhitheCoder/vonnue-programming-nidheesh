@@ -1,9 +1,9 @@
 
 let stringValue = "this is a string";
 
-const removeVowel = str => {
+removeVowel = str => {
   let vowels = ["a", "e", "i", "o", "u"];
-  for (i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i++) {
 
     vowels.forEach(val => {
       if (val === str[i]) {
@@ -13,4 +13,5 @@ const removeVowel = str => {
   }
   return str;
 };
+
 console.log(removeVowel(stringValue));
