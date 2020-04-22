@@ -7,7 +7,7 @@ convertToBin = decimalNum => {
     i = 1;
 
   while (decimalNum > 0) {
-    binary = (decimalNum % 2) * i + binary;
+    binary = binary + (decimalNum % 2) * i;
     decimalNum = Math.floor(decimalNum / 2);
     i = i * 10;
   }
