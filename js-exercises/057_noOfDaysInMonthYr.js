@@ -4,10 +4,7 @@ let month = readline.question("enter the Month name : ");
 
 findNoOfDays = (year, month) => {
   let months = [
-    {
-      name: "january",
-      days: 31
-    },
+    { name: "january", days: 31 },
     { name: "february", days: 28 },
     { name: "march", days: 31 },
     { name: "april", days: 30 },
