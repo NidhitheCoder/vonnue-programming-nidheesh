@@ -1,6 +1,8 @@
-let stringValue = "abcad";
+let stringValue = "abZcd";
 
 sortString = str => {
+  str=str.toLowerCase();
+  console.log(str)
   let arr = str.split("");
 
   for (let i = 0; i <= arr.length - 1; i++) {
