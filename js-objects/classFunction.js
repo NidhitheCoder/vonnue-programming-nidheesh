@@ -3,10 +3,10 @@ const readline = require("readline-sync");
 
 // Add new student
 addStudent = (studentArray, name, id) => {
-  for( let i =0; i < studentArray.length;i++){
-  if (  studentArray[i].id===id) {
-    return "The ID is already used for anouther student"
-  }
+  for (let i = 0; i < studentArray.length; i++) {
+    if (studentArray[i].id === id) {
+      return "The ID is already used for anouther student";
+    }
   }
   let marks = [];
   let test = {
@@ -17,7 +17,6 @@ addStudent = (studentArray, name, id) => {
   studentArray.push(test);
   return studentArray;
 };
-
 
 // enter students mark and subject
 enterMark4Student = (studentArray, inputId, subject, mark) => {
@@ -38,7 +37,6 @@ enterMark4Student = (studentArray, inputId, subject, mark) => {
   }
 };
 
-
 // for enter multiple student details
 enterMark4Students = (arrayStudent, subject) => {
   let length = arrayStudent.length;
@@ -51,12 +49,10 @@ enterMark4Students = (arrayStudent, subject) => {
   }
 };
 
-
 // for edit student mark
 editMark = (studentArray, inputId, inputSubject, InputMark) => {
   return enterMark4Student(studentArray, inputId, inputSubject, InputMark);
 };
-
 
 // change class teacher
 changeTeacher = (classDetails, inputClassName, inputTeacherName) => {
@@ -65,7 +61,6 @@ changeTeacher = (classDetails, inputClassName, inputTeacherName) => {
   }
   return classDetails;
 };
-
 
 // delete a student
 deleteStudent = (arr, inputId) => {
@@ -76,7 +71,6 @@ deleteStudent = (arr, inputId) => {
   }
   return arr;
 };
-
 
 // delete a subject entry from all the students
 deleteSubject = (arr, inputSubject) => {
@@ -93,8 +87,7 @@ deleteSubject = (arr, inputSubject) => {
   return arr;
 };
 
-
-// find topper student editMarkin a given subject.
+// find topper student  Mark in  given subject.
 topperOfSubject = (arr, inputSubject) => {
   let topStudent = "",
     top = 0;
@@ -120,8 +113,7 @@ topperOfSubject = (arr, inputSubject) => {
   );
 };
 
-
-// find avarage marks in a given subject
+// find avarage marks of given subject
 avarageOfSubject = (arr, inputSubject) => {
   let avg = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -138,7 +130,6 @@ avarageOfSubject = (arr, inputSubject) => {
   return avg + " mark is the avarage in " + inputSubject;
 };
 
-
 // sort list by name
 sortingByName = studentArr => {
   studentArr.sort((student1, student2) =>
@@ -147,22 +138,20 @@ sortingByName = studentArr => {
   return studentArr;
 };
 
-
-// sort by marks of a given subject
+// sort list by marks of a given subject
 sortingByMarks = (schoolClass, subject) => {
   schoolClass.students.sort((student1, student2) => {
-    let arraysubjects1 = student1.marks;
-    let arraysubjects2 = student2.marks;
-    checkSubject1 = arraysubjects1 => arraysubjects1.subject === subject;
-    checkSubject2 = arraysubjects2 => arraysubjects2.subject === subject;
+    let arrsubjects1 = student1.marks;
+    let arrsubjects2 = student2.marks;
+    checkSubject1 = arrsubjects1 => arrsubjects1.subject === subject;
+    checkSubject2 = arrsubjects2 => arrsubjects2.subject === subject;
     return (
-      student2.marks[arraysubjects2.findIndex(checkSubject2)].mark -
-      student1.marks[arraysubjects1.findIndex(checkSubject1)].mark
+      student2.marks[arrsubjects2.findIndex(checkSubject2)].mark -
+      student1.marks[arrsubjects1.findIndex(checkSubject1)].mark
     );
   });
   return schoolClass;
 };
-
 
 // findout total mark gained by a student
 findTotalMark = (studentArr, id) => {
@@ -178,7 +167,6 @@ findTotalMark = (studentArr, id) => {
   }
   return studentArr;
 };
-
 
 module.exports = {
   addStudent,
