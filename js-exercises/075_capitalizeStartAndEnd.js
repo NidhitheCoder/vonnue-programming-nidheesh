@@ -14,7 +14,7 @@ capitalizeBothEnd = (arrSeparate, stringConcat) => {
   return (stringConcat + charConcat + " ");
 };
 
-capitalizeStartEnd = str => {
+capitalize = str => {
   let arr = str.split(" ");
   let stringConcat = "";
   for (let i = 0; i < arr.length; i++) {
@@ -24,4 +24,4 @@ capitalizeStartEnd = str => {
   return stringConcat;
 };
 
-console.log(capitalizeStartEnd(string));
+console.log(capitalize(string));
