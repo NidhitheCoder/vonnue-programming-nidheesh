@@ -1,4 +1,3 @@
-const readline = require("readline-sync");
 let arr = [2, 1, 3, 5, 4, 6, 8, 6, 9, 8],
   result = [];
 
